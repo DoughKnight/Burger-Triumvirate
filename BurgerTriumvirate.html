@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Burger Triumvirate</title>
+		<link type="text/css" rel="stylesheet" href="BurgerTriumvirate.css" />
+		<script src="jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>The Burger Triumvirate</h1>
+		<div class="lesser">
+			<section>
+				<p>Imagine, for a moment, that your daily intake of food was restricted -- severly restricted. This restriction would imply that you could consume nought but one type of food thrice a day. In time, this would degrade one's nutrition, nearly placing one in a survival situation. Now imagine, quite on the contrary, that this food was at the pinacle of globalized, leisurely society, where nearly any number of alternatives would be accessible. In this case, the food occurs in the form of hamburgers, a choice unfortunately not far from imagination in present society. In order to help enlighten people on the importance of nutrition, we have sought to simulate the consumption of three burgers a day, over one year, in an easy and understandable format.</p>
+			</section>
+		</div>
+		<div class="main">
+			<div class="left">
+				<h2>Settings</h2>
+				<form>
+					<button type="button" onclick="resetSlider()">Reset</button>
+					<button type="button" onclick="play()">Play</button>
+					<button type="button" onclick="pause()">Pause</button><br/>
+					<span id="startDate">January 1st</span><input id="dateSlider" type ="range" min ="0" max="33" step="1" value ="0" oninput="pause()"/><span id="endDate">December 31st</span>
+					<fieldset>
+					<button type="button" onclick="resetSeason()">Reset to default</button>
+						<legend>Season</legend>
+						<input type="radio" name="season" onclick="setSeason()" checked>All</input>
+						<input type="radio" name="season" onclick="setSeason()">Winter</input>
+						<input type="radio" name="season" onclick="setSeason()">Spring</input>
+						<input type="radio" name="season" onclick="setSeason()">Summer</input>
+						<input type="radio" name="season" onclick="setSeason()">Fall</input>
+					</fieldset>
+					<fieldset>
+						<button type="button" onclick="resetMealPlan()">Reset to default</button>
+						<legend>Daily Meal Plan</legend>
+						<input type="radio" name="mealPlan" onclick="setMealPlan()">Three average meals</input><br/>
+						<input type="radio" name="mealPlan" onclick="setMealPlan()">Two average meals + one burger</input><br/>
+						<input type="radio" name="mealPlan" onclick="setMealPlan()">One average meal + two burgers</input><br/>
+						<input type="radio" name="mealPlan" onclick="setMealPlan()" checked>Three burgers</input><br/>
+					</fieldset>
+					<fieldset>
+						<button type="button" onclick="resetExercise()">Reset to default</button>
+						<legend>Exercise</legend>
+						<input type="radio" name="exercise" onclick="setExercise()">Couch potato</input><br/>
+						<input type="radio" name="exercise" onclick="setExercise()">Lazy</input><br/>
+						<input type="radio" name="exercise" onclick="setExercise()" checked>Average</input><br/>
+						<input type="radio" name="exercise" onclick="setExercise()">Active</input><br/>
+						<input type="radio" name="exercise" onclick="setExercise()">Athletic</input><br/>
+					</fieldset>
+				</form>
+			</div>
+			<div class="mid">
+				<h2>Human Body Diagram</h2>
+				<img id="growth" src="fat/fat%20growth0000.png"/>
+			</div>
+			<div class="right">
+				<h2>Statistics</h2>
+				<h3>BMI</h3><br/><span id="BMI">18.5</span><br/>
+				<h3>Weight Classification</h3><br/><span id="WC">Normal Weight</span><br/>
+			</div>
+		</div>
+		<footer>
+		<div class="lesser">
+			<p>The Burger Triumvirate is a relatively simple client-side browser interpreted solution prepared for <i>K. P.'s</i> class during the fall 2016 semester. This work may or may not reflect realistic nutritional values. The Burger Triumvirate should not be used for medical consultation, and assistance from a medical professional is always advised.</p>
+		</div>
+		</footer>
+		<script src="BurgerTriumvirate.js"></script>
+	</body>
+</html>
